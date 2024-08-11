@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #709775;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,9 +14,18 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(./utils/Mallovice-Regular.otf);
+}
+*{
+  font-family: myFirstFont;
+  font-size: 2vh;
+  
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
@@ -24,9 +33,11 @@ a:hover {
 }
 
 body {
+  
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #A1CCA5;
 }
 
 h1 {
@@ -50,7 +61,14 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 8px auto -webkit-focus-ring-color;
+}
+
+.navbar{
+  background-color: #709775;
+}
+.navbar-nav{
+  font-size: 4vw;
 }
 
 .profile-footer {
@@ -60,10 +78,11 @@ button:focus-visible {
   padding: 1em;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #709775;
+    background-color: #A1CCA5;
   }
   a:hover {
     color: #747bff;
