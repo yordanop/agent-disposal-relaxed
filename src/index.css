@@ -18,6 +18,10 @@
   --dark-text-color: #324A51;
   --stripe-1:#709775;
   --stripe-2:#FFF7D6;
+
+
+  --header-height: 9vh;
+  --main-items-width:40vw;
 }
 
 @font-face {
@@ -61,13 +65,20 @@ p{
   font-size: 3vw;
 }
 
-ul{
-  font-size: 5vw;
+li{
+  font-size: 2vw;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 4.5vw;
+}
+h3 {
+  font-size: 4vw;
 }
 img{
   height: 100%;
@@ -127,11 +138,6 @@ button:focus-visible {
   opacity: 1;
 }
 
-.content a{
-  display: flex;
-  flex-wrap: wrap;
-}
-
 img:hover{
   opacity: 1;
   transition: 0.2s;
@@ -187,6 +193,62 @@ img:hover{
 .about-me p{
   font-size: 2vw;
 }
+
+.principal{
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  left: 50vw;
+  margin-left: calc(var(--main-items-width)/(-2));
+  width: var(--main-items-width);
+}
+
+.principal{
+  top: calc(42vh - var(--header-height));
+}
+
+
+.principal label{
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.principal label, .principal h2{
+  color: var(--light-text);
+}
+
+
+.principal input, .principal textarea {
+  padding: 1vw;
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin-bottom: 1rem;
+  border: 0;
+  height: 2rem;
+}
+
+.principal #contentInput {
+  height: 8vw;
+}
+
+
+
+
+.principal button{
+  margin-top: 2vh;
+  height: 5vh;
+  width: 100%;
+  border: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+
 
 
 

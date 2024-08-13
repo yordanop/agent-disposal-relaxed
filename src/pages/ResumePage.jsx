@@ -3,7 +3,7 @@ export default function AboutPage() {
   return (
     <div id="resume-div" className="m-4">
       <h2>Resume</h2>
-      <p>Download my <a href="">resume</a></p>
+      <p>Download my <a href="https://yordanop.github.io/yordano-portfolio/">resume</a></p>
       <h3>Front-end Prodicencies</h3>
       <ul>
         <li>HTML</li>
