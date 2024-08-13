@@ -12,22 +12,39 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --light-color:#F9F871;
+  --dark-color:#28626F;
+  --dark-text-color: #324A51;
+  --stripe-1:#709775;
+  --stripe-2:#FFF7D6;
 }
 
 @font-face {
   font-family: myFirstFont;
   src: url(./utils/Mallovice-Regular.otf);
 }
+
 *{
   font-family: myFirstFont;
-  font-size: 2vh;
+  font-size: 1.5vh;
   
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
   font-weight: 500;
   text-decoration: inherit;
+  text-underline-offset: 0.7rem;
+  text-decoration-thickness: 0.2rem;
+  color: var(--dark-color);  
+  font-size: 3vw;
 }
+
+
 a:hover {
   color: #535bf2;
 }
@@ -36,13 +53,27 @@ body {
   
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
-  background-color: #A1CCA5;
+  min-height: 100vh; 
+}
+
+p{
+  padding: 0 1rem;
+  font-size: 3vw;
+}
+
+ul{
+  font-size: 5vw;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+img{
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  transition: 0.2s;
 }
 
 button {
@@ -71,12 +102,92 @@ button:focus-visible {
   font-size: 4vw;
 }
 
+.navbar-nav a{
+  margin: 0 2vw;
+}
+
 .profile-footer {
   text-align: center;
   position: fixed;
   inset: auto 0 0 0;
   padding: 1em;
 }
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 1rem 2.5rem;
+  border: 10rem 5rem;
+}
+
+.content p{
+  color: var(--dark-color);
+  text-align: left;
+  opacity: 1;
+}
+
+.content a{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img:hover{
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.left{
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.right{
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.first {
+  width: 100%;
+  
+  margin: 0 10vh 0.5rem 10vh;
+}
+
+.imag-cntr .project-title{
+  position: absolute;
+  background-color: var(--light-color);
+  color: var(--light-color);
+  align-self: flex-end;
+  bottom: 1rem;
+  opacity: 1;
+  z-index: 1;
+} 
+
+.imag-cntr p:nth-child(1){
+  font-size: 5vh;
+}
+
+.imag-cntr p:nth-child(2){
+  font-size: 2.5vh;
+}
+
+.imag-cntr {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: calc(50% - 0.5rem);
+  border: 2vh solid var(--stripe-1);
+  position: relative;
+  transition: 0.5s;
+}
+
+
+.about-me {
+  margin: 10vh;
+  font-size: 3vw;
+}
+
+.about-me p{
+  font-size: 2vw;
+}
+
 
 
 @media (prefers-color-scheme: light) {
@@ -89,5 +200,22 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media  (max-width : 1000px) {
+  .imag-cntr {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      border: 0.5rem solid var(--light-color);
+      transition: 0.5s;
+  }
+  .left{
+      margin: 0.5rem 0 0.5rem 0;
+  }
+  
+  .right{
+      margin: 0.5rem 0 0.5rem 0;
   }
 }
